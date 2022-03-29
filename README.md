@@ -1,4 +1,4 @@
-# Deep Deterministic Policy Gradient (DDPG) in Tensorflow 
+# Deep Deterministic Policy Gradient (DDPG) in Tensorflow and 
 
 ## Requirements
 `pip3 install -r requirements.txt`
@@ -33,3 +33,4 @@ optional arguments:
                         Save the weight of the network in the defined
                         checkpoint file directory.
 
+## Network performance analysis tool is called to run the DDPG/main.py thought the multi-run.cc script of NS-3
