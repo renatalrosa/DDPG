@@ -1,36 +1,27 @@
-# Deep Deterministic Policy Gradient (DDPG) in Tensorflow and 
+# ns3-network-performance-tool-v2
+NS-3 network performance analysis tool 
 
-## Requirements
-`pip3 install -r requirements.txt`
+INSTALLATION INSTRUCTIONS:
+Copy files from repository to ns-3 installation folder. Nothing else is needed to be done.
+These folders are changed:
+.../scratch,
+.../src/applications,
+.../src/applications/model,
+.../src/applications/helper.
+There are few small differences between ns3 releases, so files that are release specific are stored in  the folder: "release specific files". 
 
-## Training
-```python3
-python3 main.py [-h] [--env [ENV]]
-                 [--render_env [RENDER_ENV]]
-                 [--train [TRAIN]]
-                 [--use_noise [USE_NOISE]]
-                 [--eps_greedy [EPS_GREEDY]]
-                 [--warm_up [WARM_UP]]
-                 [--save_weights [SAVE_WEIGHTS]]
-Deep Deterministic Policy Gradient (DDPG) in Tensorflow 
+USAGE INSTRUCTIONS:
+Usage of StatsFlows tool in NS-3 script 
+int main () {
+  // .... network configuration
+  StatsFlows sf;
+  Simulator::Run (); 
+  sf.Finalize ();
+  Simulator::Destroy ();
+  return 0;
+}
 
-optional arguments:
-  -h, --help            show this help message and exit
-  --env [ENV]           The OpenAI Gym environment to train on
-  
-  --render_env [RENDER_ENV]
-                        Render the environment to be visually visible
-  --train [TRAIN]       Train the network on the modified DDPG algorithm
-  --use_noise [USE_NOISE]
-                        OU Noise will be applied to the policy action
-  --eps_greedy [EPS_GREEDY]
-                        The epsilon for Epsilon-greedy in the policy's action
-  --warm_up [WARM_UP]   Following recommendation from OpenAI Spinning Up, the
-                        actions in the early epochs can be set random to
-                        increase exploration. This warm up defines how many
-                        epochs are initially set to do this.
-  --save_weights [SAVE_WEIGHTS]
-                        Save the weight of the network in the defined
-                        checkpoint file directory.
+./multi-run.sh
 
-## Network performance analysis tool is called to run the DDPG/main.py thought the multi-run.cc script of NS-3
+
+
