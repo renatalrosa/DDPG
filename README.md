@@ -23,5 +23,5 @@ int main () {
 
 ./multi-run.sh
 
-
+About the detail how we incorporated our learning-based scheme in NS-3: the DDPG/main.py run thought the multi-run.cc script of NS-3 and using the Mode: python; py-indent-offset: 4 in wscript in path Downloads\ns3-network-performance-tool-v2-master\release specific files\ns3.29 & ns3.30 & ns3.30.1\src\applications.
 
